@@ -1,0 +1,155 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--moov-color-light);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav{
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.nav__logo,
+.nav__toggle{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo img{
+     width: 160px;
+}
+
+.nav__contact,
+.nav__contact-button{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav__contact-icon{
+    height: 2rem;
+    margin-right: 20px;
+}
+
+.nav__list{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold); 
+    transition: .3s;
+}
+
+.nav__icon,
+.nav__close,
+.nav__toggle{
+    display: none;
+}
+
+/* Active link */
+.active-link,
+.nav__link:hover{
+    color: var(--title-color-dark);
+}
+
+/* change header background */
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Breakpoints */
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .header{
+        top: 0;
+        height: 3rem;
+    }
+    .nav{
+        height: var(--header-height);
+    }
+
+    .nav__menu{
+        position: fixed;
+        display: none;
+        top: 0;
+        height: 200px;
+        left: 0;
+        width: 100%;
+        background-color: #a8d4d4;
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px var(--moov-color-light);
+        border-radius:  0 0 1.5rem 1.5rem;
+        transition: .3s;
+    }
+
+    .nav__contact{
+        margin-left: auto;
+    }
+
+    .nav__contact-icon{
+        height: 1.5rem;
+        margin-right: 15px;
+    }
+
+    .nav__logo img{
+        width: 140px;
+    }
+
+    .nav__list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .nav__icon{
+        font-size: 1.2rem;
+    }
+
+    .nav__close{
+        position: absolute;
+        right: 1.3rem;
+        top: .5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--title-color);
+    }
+
+    .nav__close:hover{
+        color: var(--title-color-dark);
+    }
+
+    .nav__toggle{
+        font-size: 1.5rem;
+        cursor: pointer; 
+    }
+
+    .nav__icon,
+    .nav__close,
+    .nav__toggle{
+        display: block;
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .nav__menu{
+        padding: 2rem 0.25rem 4rem;
+    }
+
+    .nav__list{
+        column-gap: 0;
+    }
+}

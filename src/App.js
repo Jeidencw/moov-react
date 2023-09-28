@@ -1,6 +1,6 @@
 import './App.css';
 import Menu from './componentes/Menu';
-import Servicos from './componentes/Servicos';
+import Servicos from './componentes/Servicos'
 
 function App() {
   return (

@@ -22,7 +22,7 @@
 }
 
 .content_box{
-    padding: 20px;
+    padding-top: 20px;
 }
 
 .content_box .content{
@@ -45,12 +45,18 @@
 
 .line{
     position: absolute;
-    top: 133px;
-    left: 0;
-    width: 0npm run build
-    ;
+    top: 62px;
+    left: 17px;
+    width: 90px;
     height: 5px;
     background-color: #7360ff;
     border-radius: 10px;
     transition: all .3s ease;
+}
+
+@media screen and (max-width: 992px) {
+    .tab_box .tab_btn{
+        font-size: 16px;
+        padding: 10px;
+    }
 }

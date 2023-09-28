@@ -1,4 +1,5 @@
 import './App.css';
+import Localizacao from './componentes/Localizacao';
 import Menu from './componentes/Menu';
 import QuemSomos from './componentes/QuemSomos';
 import Servicos from './componentes/Servicos'
@@ -9,6 +10,7 @@ function App() {
       <Menu />
       <Servicos />
       <QuemSomos />
+      <Localizacao />
     </>
   );
 }

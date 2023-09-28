@@ -1,0 +1,31 @@
+.localizacao__container{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.localizacao__title{
+    margin-bottom: 4rem;
+}
+
+.localizacao__text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+iframe{
+    width: 90%;
+    height: 60vh;
+    margin-top: -100px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .localizacao__title{
+        margin-bottom: 1rem;
+    }
+}

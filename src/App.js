@@ -1,5 +1,6 @@
 import './App.css';
 import Menu from './componentes/Menu';
+import QuemSomos from './componentes/QuemSomos';
 import Servicos from './componentes/Servicos'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Menu />
       <Servicos />
+      <QuemSomos />
     </>
   );
 }

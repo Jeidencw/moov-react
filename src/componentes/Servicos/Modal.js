@@ -11,9 +11,9 @@ const Modal = ({ openModal, closeModal, service }) => {
       <>
         {service.name === 'Pilates' 
         ? (
-          <div className={`services__modal modal ${openModal ? 'active-modal' : ''}`}>
+          <div className={`services__modal modal ${openModal ? 'active-modal' : ''}`} onClick={closeModal}>
             <div className='services__modal-content'>
-                <i className="uil uil-times services__modal-close fechaModal" onClick={closeModal}></i>
+                <i className="uil uil-times services__modal-close" onClick={closeModal}></i>
   
             <div className="tab_box">
             {service.tabs.map((tab, index) => (
@@ -49,9 +49,9 @@ const Modal = ({ openModal, closeModal, service }) => {
             </div>
         ) : (
   
-          <div className={`services__modal modal ${openModal ? 'active-modal' : ''}`}>
+          <div className={`services__modal modal ${openModal ? 'active-modal' : ''}`} onClick={closeModal}>
               <div className='services__modal-content'>
-                  <i className="uil uil-times services__modal-close fechaModal" onClick={closeModal}></i>
+                  <i className="uil uil-times services__modal-close" onClick={closeModal}></i>
                       <h3 className="services__modal-title">{service.name}</h3>
                       <p className='services__modal-description' dangerouslySetInnerHTML={{ __html: service.descricao}}></p>
           
@@ -59,7 +59,6 @@ const Modal = ({ openModal, closeModal, service }) => {
                       {service.beneficios.map(beneficio => (
                           <li className="services__modal-service" key={beneficio}>
                           <i className="uil uil-check-circle services__modal-icon"></i>
-                          {/* <p className="services__modal-info">{beneficio}</p> */}
                           <p className="services__modal-info" dangerouslySetInnerHTML={{ __html: beneficio }}></p>
                           </li>
                       ))}

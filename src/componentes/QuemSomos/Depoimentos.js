@@ -57,15 +57,18 @@ const Depoimentos = () => {
 
     const [slidesPerView, setSlidePerView] = useState(3)
     const [navigation, setNavigation] = useState(true)
+    const [spaceBetweenSlides, setSpaceBetweenSlides] = useState(30)
 
     useEffect(() => {
         const handleResize = () => {
             if(window.innerWidth < 950){
                 setSlidePerView(2)
                 setNavigation(false)
+                setSpaceBetweenSlides(10)
             }else{
                 setSlidePerView(3)
                 setNavigation(true)
+                setSpaceBetweenSlides(30)
             }
         }
 
@@ -83,7 +86,7 @@ const Depoimentos = () => {
         <div className='slide__containerDepoimentos'>
             <Swiper
                 slidesPerView={slidesPerView}
-                spaceBetween={30}
+                spaceBetween={spaceBetweenSlides}
                 slidesPerGroup={3}
                 grabCursor={true}
                 keyboard={{ enabled: true }}
